@@ -39,13 +39,13 @@ npm start
 5.Open http://localhost:3000 in your browser.
 ```
 
-###Usage
+#### Usage
 
 • Add your own posts, search for topics, or browse the latest updates.
 
 • Enjoy smooth navigation between pages and a responsive, modern layout.
 
-###Contributing
+#### Contributing
 
 Feel free to fork the project, open issues, or submit pull requests. Suggestions and improvements are always welcome!
 
