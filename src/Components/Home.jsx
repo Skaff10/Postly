@@ -5,7 +5,9 @@ const Home = ({ posts }) => {
       {posts.length ? (
         posts.map((post) => <Post key={post.id} post={post} />)
       ) : (
-        <p className="mt-8">No posts to display... 😔 </p> 
+        <p className="mt-8 text-center text-gray-300 text-lg font-medium">
+          No posts to display... <span className="text-amber-300">😔</span>
+        </p>
       )}
     </main>
   );
