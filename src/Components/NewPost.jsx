@@ -10,7 +10,7 @@ const NewPost = ({
       <h2 className="text-3xl font-serif font-bold mb-6 text-amber-300">
         Create a New Post
       </h2>
-
+    <p></p>
       <form onSubmit={handleSubmit} className="flex flex-col gap-6">
         {/* Title */}
         <div className="flex flex-col">

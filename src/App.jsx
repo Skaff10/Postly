@@ -89,7 +89,7 @@ const App = () => {
     <div className="flex flex-col h-screen">
       <Header />
       <Nav search={search} setSearch={setSearch} />
-
+      <p></p>
       <main
         className={`flex-grow ${
           isScrollable ? "overflow-y-auto" : ""

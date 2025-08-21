@@ -5,7 +5,7 @@ const Footer = () => {
         <p className="text-sm text-gray-400">
           © <span className="text-amber-300 font-semibold">2025</span> Basic
           Blog Post JS. All rights reserved.
-        </p>
+        </p> <p></p>
       </div>
     </footer>
   );

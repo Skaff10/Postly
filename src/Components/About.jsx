@@ -70,7 +70,7 @@ const About = () => (
       Made with ☕, 💻, and a lot of curiosity.
       <br />
       <span className="text-amber-300 font-semibold">Made by Albab</span>
-    </div>
+    </div><p></p>
   </section>
 );
 

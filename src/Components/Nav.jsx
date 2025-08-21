@@ -4,6 +4,7 @@ const Nav = ({ search, setSearch }) => {
   return (
     <nav className="flex items-center justify-between bg-gray-900 px-6 py-3 shadow-md  border-gray-700">
       {/* Search Bar */}
+        <p></p>
       <form
         className="flex flex-grow max-w-md"
         onSubmit={(e) => e.preventDefault()}
