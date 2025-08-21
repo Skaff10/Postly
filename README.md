@@ -51,7 +51,7 @@ Feel free to fork the project, open issues, or submit pull requests. Suggestions
 
 ### Author
 
-Albab ☕💻 – Made with curiosity and a love for coding.
+Albab ☕💻 – Made with curiosity and a lot of love for coding.
 
 ---
 
