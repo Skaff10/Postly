@@ -1,8 +1,13 @@
 const Header = () => {
   return (
-    <div className="font-bold font-mono flex justify-center text-4xl bg-fuchsia-50 h-15 items-center border-b-2 border-b-black">
-      <h1 className="">Basic Blog Post JS</h1>
-    </div>
+    <header className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-md border-b border-gray-700">
+      <div className="flex justify-center items-center h-20">
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-amber-200 tracking-wide drop-shadow-sm hover:text-amber-300 transition-colors duration-300">
+          Basic Blog Post JS
+        </h1>
+      </div>
+    </header>
   );
 };
+
 export default Header;

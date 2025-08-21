@@ -1,32 +1,39 @@
 import { Link } from "react-router-dom";
+
 const Nav = ({ search, setSearch }) => {
   return (
-    <nav className="flex  bg-zinc-400 items-center">
-      <form className="flex w-1/2" onSubmit={(e) => e.preventDefault()}>
+    <nav className="flex items-center justify-between bg-gray-900 px-6 py-3 shadow-md  border-gray-700">
+      {/* Search Bar */}
+      <form
+        className="flex flex-grow max-w-md"
+        onSubmit={(e) => e.preventDefault()}
+      >
         <input
           id="search"
-          className="ml-2 p-2 bg-white w-3xl rounded-l-xl  text-black rounded-r-xl h-12 mt-0.5 mb-1"
           type="text"
-          placeholder="Search Post..."
+          placeholder="Search posts..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          className="w-full rounded-xl bg-gray-800 text-gray-200 placeholder-gray-400 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
         />
       </form>
-      <ul className="flex justify-center mr-2  gap-10  mb-1 w-1/2">
+
+      {/* Nav Links */}
+      <ul className="flex gap-6 ml-6">
         <Link
-          className="bg-gray-300 rounded h-7 flex items-center  pl-4 pr-4 hover:bg-gray-900 hover:text-white "
+          className="text-gray-300 hover:text-amber-300 font-medium transition-colors"
           to="/"
         >
           Home
         </Link>
         <Link
-          className="bg-gray-300 rounded h-7 flex items-center  pl-4 pr-4 hover:bg-gray-900 hover:text-white"
+          className="text-gray-300 hover:text-amber-300 font-medium transition-colors"
           to="/post"
         >
           Post
         </Link>
         <Link
-          className="bg-gray-300 rounded h-7 flex items-center pl-4 pr-4 hover:bg-gray-900 hover:text-white"
+          className="text-gray-300 hover:text-amber-300 font-medium transition-colors"
           to="/about"
         >
           About
@@ -35,4 +42,5 @@ const Nav = ({ search, setSearch }) => {
     </nav>
   );
 };
+
 export default Nav;

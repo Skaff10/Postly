@@ -3,31 +3,40 @@ import { Link, useParams } from "react-router-dom";
 const PostPage = ({ posts, handleDelete }) => {
   const { id } = useParams();
   const post = posts.find((post) => post.id.toString() === id);
+
   return (
-    <div>
-      <article className="mx-auto p-6 bg-white shadow-md rounded-md">
-        {post && (
+    <div className="flex  mt-6 px-4">
+      <article className="w-full bg-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+        {post ? (
           <>
-            <h2 className="text-2xl font-bold mb-2">{post.title}</h2>
-            <p className="text-sm text-gray-500 mb-4">{post.dateTime}</p>
-            <p className="text-gray-700 mb-4">{post.body}</p>
+            <h2 className="text-3xl font-serif font-bold mb-3 text-amber-300">
+              {post.title}
+            </h2>
+            <p className="text-sm text-gray-400 mb-6">{post.dateTime}</p>
+            <p className="text-gray-200 mb-6 leading-relaxed">{post.body}</p>
 
             <button
-              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
               onClick={() => handleDelete(post.id)}
+              className="bg-red-600 cursor-pointer text-white px-5 py-2 rounded-lg hover:bg-red-700 transition-colors font-semibold"
             >
               Delete
             </button>
           </>
-        )}{" "}
-        {!post && (
+        ) : (
           <>
-            <h2 className="text-2xl font-bold mb-2">Post Not Found</h2>
-            <p className="text-sm text-gray-500 mb-4">
-              Well, that's Disappointing.
+            <h2 className="text-3xl font-serif font-bold mb-3 text-amber-300">
+              Post Not Found
+            </h2>
+            <p className="text-sm text-gray-400 mb-4">
+              Well, that's disappointing.
             </p>
-            <p className="underline text-blue-600">
-              <Link to="/"> Visit Our HomePage</Link>
+            <p>
+              <Link
+                to="/"
+                className="underline text-amber-400 hover:text-amber-300 transition-colors"
+              >
+                Visit Our HomePage
+              </Link>
             </p>
           </>
         )}
@@ -35,4 +44,5 @@ const PostPage = ({ posts, handleDelete }) => {
     </div>
   );
 };
+
 export default PostPage;

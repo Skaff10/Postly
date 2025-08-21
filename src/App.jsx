@@ -7,13 +7,15 @@ import Nav from "./Components/Nav";
 import NewPost from "./Components/NewPost";
 import PostPage from "./Components/PostPage";
 import { useState, useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import { format } from "date-fns";
 
 const App = () => {
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const history = useNavigate();
+  const location = useLocation();
+
   const [posts, setPosts] = useState([
     {
       id: 1,
@@ -51,8 +53,8 @@ const App = () => {
     setSearchResults(filteredPost.reverse());
   }, [posts, search]);
 
-  const [postTitle, setPostTitle] = useState();
-  const [postBody, setPostBody] = useState();
+  const [postTitle, setPostTitle] = useState("");
+  const [postBody, setPostBody] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -78,13 +80,24 @@ const App = () => {
     setPosts(postList);
     history("/");
   };
+
+  // Determine if the page should scroll
+  const scrollablePages = ["/", "/post"]; // Add paths that should scroll
+  const isScrollable = scrollablePages.includes(location.pathname);
+
   return (
     <div className="flex flex-col h-screen">
       <Header />
       <Nav search={search} setSearch={setSearch} />
+
       <main
-        className="flex-grow overflow-y-auto"
-        style={{ minHeight: 0, marginBottom: "40px" }} // 40px = footer height
+        className={`flex-grow ${
+          isScrollable ? "overflow-y-auto" : ""
+        } bg-gray-700 flex-grow 
+                 scrollbar-thumb-gray-500 scrollbar-track-gray-900
+                 scrollbar-thin 
+                 hover:scrollbar-thumb-amber-400 transition-colors duration-200`}
+        style={{ minHeight: 0, marginBottom: "40px" }}
       >
         <Routes>
           <Route path="/" element={<Home posts={searchResults} />} />
@@ -108,8 +121,10 @@ const App = () => {
           <Route path="*" element={<Missing />} />
         </Routes>
       </main>
+
       <Footer />
     </div>
   );
 };
+
 export default App;
