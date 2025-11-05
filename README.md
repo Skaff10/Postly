@@ -1,4 +1,4 @@
-# React Blog App (Postky)
+# React Blog App (Postly)
 
 Welcome to **our React-powered blog**! Here, you’ll find posts about coding, daily thoughts, and the occasional pizza debate. This project is built with **React**, **React Router**, and styled using **Tailwind CSS**, making it a fun playground for learning and sharing ideas.
 
