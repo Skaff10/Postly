@@ -1,4 +1,4 @@
-# React Blog App
+# React Blog App (Postky)
 
 Welcome to **our React-powered blog**! Here, you’ll find posts about coding, daily thoughts, and the occasional pizza debate. This project is built with **React**, **React Router**, and styled using **Tailwind CSS**, making it a fun playground for learning and sharing ideas.
 
@@ -52,11 +52,3 @@ Feel free to fork the project, open issues, or submit pull requests. Suggestions
 ### Author
 
 Albab ☕💻 – Made with curiosity and a lot of love for coding.
-
----
-
-If you want, I can also **make a shorter, super-slick version** of this README that looks **modern and Gen Z-friendly**, perfect for GitHub projects.
-
-Do you want me to do that?
-
----

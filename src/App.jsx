@@ -95,7 +95,7 @@ const App = () => {
       setPostBody("");
       history("/");
     } catch (e) {
-      console.log(`Error : ${error.message}`);
+      console.log(`Error : ${e.message}`);
     }
   };
 

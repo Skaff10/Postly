@@ -1,8 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+  const history = useNavigate();
   return (
-    <header className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-md border-b border-gray-700">
+    <header className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-md border-b border-gray-700 cursor-default">
       <div className="flex justify-center items-center h-20">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-amber-200 tracking-wide drop-shadow-sm hover:text-amber-300 transition-colors duration-300">
+        <h1
+          className="text-4xl md:text-5xl font-serif font-bold text-amber-200 tracking-wide drop-shadow-sm hover:text-amber-300 transition-colors duration-300"
+          onClick={() => history("/")}
+        >
           PostLY
         </h1>
       </div>
